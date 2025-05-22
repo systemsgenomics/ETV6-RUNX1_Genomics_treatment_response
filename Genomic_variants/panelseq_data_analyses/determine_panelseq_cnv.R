@@ -9,7 +9,7 @@ panel <- panel[,c(1,6,5,7)]
 for (s in panel[,1]) {
   
   # CNVkit output
-  tab <- read.table(paste0("/Volumes/groups/allseq/data/WGS/WGS_GEPARD/validation/panel_seq/910242_batch2/910242/case", s, "/tumor.merged.cns"), sep="\t", header=T)
+  tab <- read.table(paste0("case", s, "/tumor.merged.cns"), sep="\t", header=T)
   
   # remove X and Y
   tab <- subset(tab, tab$chromosome %in% c(1:22))
